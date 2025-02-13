@@ -21,7 +21,7 @@
 
     </head>
 
-    <body>
+    <body class>
         <h1>Activity 1</h1>
 
          <!-- 🍓BOOTSTRAP TABLE -->
