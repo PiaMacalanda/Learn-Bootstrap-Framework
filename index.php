@@ -7,7 +7,7 @@ $name = "Pia Katleya V. Macalanda";
 $header2 = "🧺Bootstrap Activities";
 $activities = [
     "Activity1" => "Activity1\activity1.php",
-    "Activity2" => "activity2.php",
+    "Activity2" => "Activity2\activity2.php",
     "Activity3" => "activity3.php",
     // Add more activities as needed
 ];
