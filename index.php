@@ -6,9 +6,10 @@ $image = "profile.jpg"; // Replace with actual image path
 $name = "Pia Katleya V. Macalanda";
 $header2 = "🧺Bootstrap Activities";
 $activities = [
-    "Activity1" => "Activity1\activity1.php",
-    "Activity2" => "Activity2\activity2.php",
-    "Activity3" => "Activity3\activity3.php",
+    "Activity1: 🍓Bootstrap Container, 🍓Grid System, 🍓Test Tables, 🍓Tables" => "Activity1\activity1.php",
+    "Activity2: 🍓Bootstrap Image, 🍓Button, 🍓Button Group, 🍓Dropdown, 🍓Glyphicon, 🍓Alert, 🍓Badges" => "Activity2\activity2.php",
+    "Activity3: 🍓Bootstrap Panel, 🍓Collapse: Collapse Panel, List Group, List-group-collpase, 🍓Accordion, 🍓Tab and Pill Dynamic, 🍓Pager, 🍓Pagination" => "Activity3\activity3.php",
+    "Activity4: 🍓Bootstrap Navbar, 🍓Form, and 🍓Form Style Validation" => "Activity4\activity4.php",
     // Add more activities as needed
 ];
 ?>
