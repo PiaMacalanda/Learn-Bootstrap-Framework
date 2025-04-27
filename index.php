@@ -10,6 +10,7 @@ $activities = [
     "Activity2: 🍓Bootstrap Image, 🍓Button, 🍓Button Group, 🍓Dropdown, 🍓Glyphicon, 🍓Alert, 🍓Badges" => "Activity2\activity2.php",
     "Activity3: 🍓Bootstrap Panel, 🍓Collapse: Collapse Panel, List Group, List-group-collpase, 🍓Accordion, 🍓Tab and Pill Dynamic, 🍓Pager, 🍓Pagination" => "Activity3\activity3.php",
     "Activity4: 🍓Bootstrap Navbar, 🍓Form, and 🍓Form Style Validation" => "Activity4\activity4.php",
+    "Activity6: 🍓Scroll Spy" => "Activity6\activity6.php",
     // Add more activities as needed
 ];
 ?>
