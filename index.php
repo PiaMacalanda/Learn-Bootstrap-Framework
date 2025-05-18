@@ -5,13 +5,10 @@ $courseSubject = "Applications Development & Emerging Technologies";
 // Function to generate the correct file path for viewing an activity
 function getActivityViewFile($activityName)
 {
-    // Extract the number from "Activity#1" format
     $number = filter_var($activityName, FILTER_SANITIZE_NUMBER_INT);
-    // Generate filename like "activity1.php"
     return $activityName . "/activity" . $number . ".php";
 }
 
-// Function to list directories and filter out special entries
 function listDirectories($path)
 {
     $directories = array();
@@ -28,7 +25,7 @@ function listDirectories($path)
     return $directories;
 }
 
-// Activity details - Add descriptions for each activity
+// Activity details
 $activityDetails = [
     "Activity1" => "Introduction to the basics of Bootstrap including setup, containers, grid layout, and foundational text and table formatting.",
     "Activity2" => "Explored key Bootstrap UI components such as images, buttons, dropdowns, alerts, and badges to enhance interface design.",
@@ -38,7 +35,6 @@ $activityDetails = [
     "Activity6" => "Applied Bootstrap’s scroll spy functionality to create active link tracking based on page scroll position.",
 ];
 
-// Use activities directly from the array instead of directories
 $activities = array_keys($activityDetails);
 
 // Process form submission if any
@@ -357,7 +353,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             z-index: 1;
         }
 
-        /* Add a subtle texture overlay */
         .texture-overlay {
             position: fixed;
             top: 0;
@@ -415,6 +410,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <a class="nav-link active" href="#home"><i class="fas fa-home me-1"></i> Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" href="#about"><i class="fas fa-user-circle me-1"></i> About</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#activities"><i class="fas fa-tasks me-1"></i> Activities</a>
                     </li>
                     <li class="nav-item">
@@ -459,18 +457,85 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="content-wrapper">
         <!-- Main Content -->
         <div class="container py-5">
+
+        <!-- About Me Section -->
+        <!-- <div class="vintage-divider"></div> -->
+            <section id="about" class="py-4">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="section-title">About Me</h2>
+                        <p class="lead">🍓 Strawberr-Codedy Path</p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="detail-box">
+                            <div class="row">
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                    <div class="text-center">
+                                        <!-- Strawberry avatar placeholder -->
+                                        <div style="width: 200px; height: 200px; background-color: var(--strawberry-light); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: var(--strawberry-red);">
+                                            🍓
+                                        </div>
+                                        <h4 class="mt-3">Hi, I'm Pia!</h4>
+                                        <p class="text-muted">Nice to meet you~</p>
+                                        <a href="https://github.com/PiaMacalanda" target="_blank" class="btn btn-outline-strawberry btn-sm">
+                                            <i class="fab fa-github me-1"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-8">
+                                    <i>
+                                    <p>
+                                        I’m a 3rd-year BS Computer Science student with a growing passion for web development. Like a strawberry—small, bright, and full of potential—I’m cultivating skills in applications development and exploring emerging technologies with curiosity and care. 
+                                    </p>
+                                    <p>
+                                        I believe great systems, like great fruit, are thoughtfully grown—rooted in logic, designed with intention, and made to be shared.
+                                    </p>
+                                    </i>
+
+                                    <!-- Tech Stack Icons -->
+                                    <div class="mt-4">
+                                        <h5><i class="fas fa-toolbox me-2" style="color: var(--strawberry-red);"></i> Tech Stack</h5>
+                                        <div class="d-flex flex-wrap gap-3 mt-2">
+                                            <span class="badge bg-light text-dark p-2"><i class="fab fa-html5 me-1" style="color: #e34f26;"></i> HTML</span>
+                                            <span class="badge bg-light text-dark p-2"><i class="fab fa-css3-alt me-1" style="color: #264de4;"></i> CSS</span>
+                                            <span class="badge bg-light text-dark p-2"><i class="fab fa-js-square me-1" style="color: #f7df1e;"></i> JavaScript</span>
+                                            <span class="badge bg-light text-dark p-2"><i class="fab fa-react me-1" style="color: #61DBFB;"></i> React</span>
+                                            <span class="badge bg-light text-dark p-2"><i class="fab fa-php me-1" style="color: #777bb3;"></i> PHP</span>
+                                            <span class="badge bg-light text-dark p-2"><i class="fab fa-node-js me-1" style="color: #3C873A;"></i> Node.js</span>
+                                            <span class="badge bg-light text-dark p-2"><i class="fab fa-git-alt me-1" style="color: #F1502F;"></i> Git</span>
+                                            <span class="badge bg-light text-dark p-2"><i class="fab fa-figma me-1" style="color: #F24E1E;"></i> Figma</span>
+                                            <span class="badge bg-light text-dark p-2"><i class="fab fa-npm me-1" style="color: #CB3837;"></i> npm</span>
+                                            <span class="badge bg-light text-dark p-2"><i class="fas fa-database me-1" style="color: #4479A1;"></i> DB2</span>
+                                            <span class="badge bg-light text-dark p-2"><i class="fas fa-paint-brush me-1" style="color: #FF9A00;"></i> Illustrator</span>
+                                            <span class="badge bg-light text-dark p-2"><i class="fas fa-terminal me-1" style="color: #012456;"></i> PowerShell</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="vintage-divider"></div>
+
             <!-- Activities Section -->
             <section id="activities" class="mb-5">
                 <div class="row">
                     <div class="col-12 text-center mb-5">
                         <h2 class="section-title">My Activities</h2>
                         <p class="lead">A journey through my web development learning path</p>
+                        <a href="https://github.com/PiaMacalanda/Learn-Bootstrap-Framework" target="_blank" class="btn btn-outline-strawberry btn-sm">
+                                            <i class="fab fa-github me-1"></i> View GitHub Bootstrap
+                        </a>
                     </div>
                 </div>
 
                 <div class="row">
                     <?php
-                    // Display activities directly from $activityDetails
                     if (!empty($activityDetails)) {
                         $index = 0;
                         echo '<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">';
@@ -483,9 +548,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                             echo '<p class="card-text mt-3">' . substr(htmlspecialchars($description), 0, 60) . '...</p>';
                             echo '<div class="d-flex justify-content-center gap-2">';
-                            // Replace the actual link with a placeholder or remove it if you don't have directories
                             echo '<a href="' . getActivityViewFile($activity) . '" class="btn btn-strawberry"><i class="fas fa-eye me-1"></i> View</a>';
-                            // echo '<button type="button" class="btn btn-strawberry view-btn" data-index="' . $index . '"><i class="fas fa-eye me-1"></i> View</button>';
                             echo '<button type="button" class="btn btn-outline-strawberry detail-btn" data-index="' . $index . '"><i class="fas fa-info-circle me-1"></i> Details</button>';
                             echo '</div>';
 
@@ -658,6 +721,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#home" class="text-white">Home</a></li>
+                        <li><a href="#about" class="text-white">About</a></li>
                         <li><a href="#activities" class="text-white">Activities</a></li>
                         <li><a href="#progress" class="text-white">Progress</a></li>
                     </ul>
@@ -755,9 +819,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
-                        // Measure navbar height dynamically
                         const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                        // Add extra padding for visual comfort
                         const offset = navbarHeight + 20;
 
                         const elementPosition = targetElement.getBoundingClientRect().top;
