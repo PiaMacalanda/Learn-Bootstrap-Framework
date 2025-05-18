@@ -1,0 +1,306 @@
+:root {
+    --strawberry-red: #ff5a5f;
+    --strawberry-light: #ffb3b3;
+    --strawberry-dark: #d03e44;
+    --strawberry-green: #7fb069;
+    --strawberry-leaf: #5c8d48;
+    --vintage-cream: #fff6e9;
+    --vintage-brown: #7d5a50;
+    --vintage-paper: #f5e8d0;
+}
+
+body {
+    background-color: var(--vintage-cream);
+    font-family: 'Poppins', sans-serif;
+    color: var(--vintage-brown);
+    position: relative;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar {
+    background-color: var(--strawberry-red);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand,
+.nav-link {
+    color: white !important;
+    font-weight: 600;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+    color: var(--vintage-cream) !important;
+}
+
+.student-info {
+    background-color: var(--strawberry-dark);
+    color: white;
+    padding: 8px 0;
+    font-size: 0.9rem;
+}
+
+.header-image {
+    height: 350px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><rect width="100%" height="100%" fill="%23ffb3b3"/><circle cx="50" cy="50" r="40" fill="%23ff5a5f"/><circle cx="150" cy="150" r="40" fill="%23ff5a5f"/><circle cx="250" cy="50" r="40" fill="%23ff5a5f"/><circle cx="350" cy="150" r="40" fill="%23ff5a5f"/><circle cx="50" cy="250" r="40" fill="%23ff5a5f"/><circle cx="150" cy="350" r="40" fill="%23ff5a5f"/><circle cx="250" cy="250" r="40" fill="%23ff5a5f"/><circle cx="350" cy="350" r="40" fill="%23ff5a5f"/></svg>');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.strawberry-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    background-color: white;
+    position: relative;
+}
+
+.strawberry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.strawberry-card::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 10px;
+    background-color: var(--strawberry-red);
+    border-radius: 0 0 50% 50%;
+}
+
+.card-body {
+    padding: 1.75rem;
+}
+
+.card-title {
+    color: var(--strawberry-dark);
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.activity-icon {
+    font-size: 2.5rem;
+    color: var(--strawberry-red);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.strawberry-card:hover .activity-icon {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.btn-strawberry {
+    background-color: var(--strawberry-red);
+    border-color: var(--strawberry-red);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-strawberry:hover {
+    background-color: var(--strawberry-dark);
+    border-color: var(--strawberry-dark);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline-strawberry {
+    border: 2px solid var(--strawberry-red);
+    color: var(--strawberry-red);
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-strawberry:hover {
+    background-color: var(--strawberry-red);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.vintage-divider {
+    height: 30px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ff5a5f" fill-opacity="0.5" d="M0,32L48,37.3C96,43,192,53,288,80C384,107,480,149,576,144C672,139,768,85,864,80C960,75,1056,117,1152,122.7C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: var(--vintage-brown);
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background-color: var(--strawberry-red);
+}
+
+.progress {
+    height: 8px;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background-color: var(--strawberry-red);
+}
+
+.detail-box {
+    background-color: var(--vintage-paper);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.detail-box:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: var(--strawberry-dark);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--strawberry-red);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: var(--strawberry-dark);
+    color: white;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+.activity-details {
+    margin-top: 10px;
+    display: none;
+}
+
+.feedback-form {
+    margin-top: 15px;
+    display: none;
+}
+
+.floating-strawberry {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 15s infinite linear;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-50px) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.texture-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="100%" height="100%" fill="none"/><path d="M0 0L200 200M200 0L0 200" stroke="%23000" stroke-width="0.3" stroke-opacity="0.05"/></svg>');
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.highlight {
+    background-color: rgba(255, 90, 95, 0.1);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
